@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Trophy, Star, Medal, Target, Zap, BookOpen, Users } from 'lucide-react';
+import { Award, Trophy, Star, Medal, Target, BookOpen, Users } from 'lucide-react';
 
 const Achievements = () => {
   const containerVariants = {
@@ -82,29 +82,23 @@ const Achievements = () => {
       name: "Microsoft Azure AI Fundamentals",
       issuer: "Microsoft",
       date: "2024",
-      icon: "☁️"
+      icon: "/microsoft-logo.png"
     },
     {
       name: "Accenture Data Analytics & Visualization",
       issuer: "Accenture North America",
       date: "2024",
-      icon: "📊"
+      icon: "/accenture.png"
     },
     {
       name: "Supervised Machine Learning",
       issuer: "DeepLearning.AI",
       date: "2024",
-      icon: "🤖"
+      icon: "/DeepLearn.png"
     },
 
   ];
 
-  const stats = [
-    { label: "LeetCode Problems", value: "600+", icon: Target },
-    { label: "Contest Rating", value: "Top 13%", icon: Star },
-    { label: "CGPA", value: "9.21", icon: Award },
-    { label: "Certifications", value: "3+", icon: Zap }
-  ];
 
   return (
     <section id="achievements" className="min-h-screen py-20 px-6 relative overflow-hidden">
@@ -187,7 +181,17 @@ const Achievements = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="text-2xl mr-4">{cert.icon}</div>
+                  <div className="w-8 h-8 mr-4 flex items-center justify-center">
+                    {cert.icon.startsWith('/') ? (
+                      <img
+                        src={cert.icon}
+                        alt={`${cert.issuer} logo`}
+                        className="w-6 h-6 object-contain"
+                      />
+                    ) : (
+                      <span className="text-2xl">{cert.icon}</span>
+                    )}
+                  </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-white text-sm group-hover:text-neon-purple transition-colors duration-300">
                       {cert.name}
