@@ -129,6 +129,21 @@
     width: 100%;
   }
 
+  /* Enhanced Navigation Backdrop */
+  .nav-backdrop {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(17, 24, 39, 0.8);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Smooth scroll behavior for navigation */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
   /* Card Hover Effects */
   .card-hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
