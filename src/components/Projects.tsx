@@ -52,8 +52,8 @@ const Projects = () => {
       description: "Scraped and preprocessed Trustpilot reviews using BeautifulSoup, NumPy, Pandas, and NLTK for sentiment analysis. Trained an ML model to classify reviews and visualized insights via Power BI dashboard.",
       image: "../../public/Senti.png",
       technologies: ["Python", "BeautifulSoup", "NumPy", "Pandas", "NLTK", "Scikit-learn", "Power BI"],
-      github: "https://github.com/adityadhane/sentiment",
-      demo: "https://sentiment-analysis-demo.com",
+      github: "https://github.com/Andy210904/Customer-Review-Sentiment-Analysis",
+      demo: "https://github.com/Andy210904/Customer-Review-Sentiment-Analysis/blob/main/DataScience.ipynb",
       featured: false,
       stats: { stars: 0, forks: 0 }
     },

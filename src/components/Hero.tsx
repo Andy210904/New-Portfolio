@@ -86,7 +86,7 @@ const Hero = () => {
             <span className="text-accent-400 font-medium">clean code</span>, and{' '}
             <span className="text-primary-400 font-medium">scalable architecture</span>.
             Currently maintaining a <span className="text-accent-400 font-medium">9.21 CGPA</span> while
-            solving <span className="text-primary-400 font-medium">400+ LeetCode problems</span>.
+            solving <span className="text-primary-400 font-medium">600+ LeetCode problems</span>.
           </p>
         </motion.div>
 

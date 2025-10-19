@@ -45,8 +45,8 @@ const Achievements = () => {
     },
     {
       icon: Star,
-      title: "400+ LeetCode Problems Solved",
-      description: "Solved 400+ questions on LeetCode, enhancing problem-solving and algorithmic skills with consistent practice",
+      title: "600+ LeetCode Problems Solved",
+      description: "Solved 600+ questions on LeetCode, enhancing problem-solving and algorithmic skills with consistent practice",
       date: "2023-2024",
       color: "from-neon-purple to-neon-pink",
       category: "Achievement"
@@ -100,7 +100,7 @@ const Achievements = () => {
   ];
 
   const stats = [
-    { label: "LeetCode Problems", value: "400+", icon: Target },
+    { label: "LeetCode Problems", value: "600+", icon: Target },
     { label: "Contest Rating", value: "Top 13%", icon: Star },
     { label: "CGPA", value: "9.21", icon: Award },
     { label: "Certifications", value: "3+", icon: Zap }
@@ -129,31 +129,6 @@ const Achievements = () => {
           </p>
         </motion.div>
 
-        {/* Stats Overview */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          variants={containerVariants}
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="glass-effect rounded-xl p-6 text-center group card-hover"
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div
-                className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full mb-4 group-hover:shadow-lg group-hover:shadow-neon-blue/25"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
-                <stat.icon size={20} className="text-white" />
-              </motion.div>
-              <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Main Achievements */}
         <motion.div className="mb-16" variants={itemVariants}>

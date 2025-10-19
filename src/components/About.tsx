@@ -29,7 +29,7 @@ const About = () => {
   const stats = [
     {
       label: 'LeetCode Problems',
-      value: '400+',
+      value: '600+',
       icon: Code2,
       description: 'Solved with consistency'
     },
@@ -61,7 +61,7 @@ const About = () => {
     },
     {
       title: 'Competitive Programming Excellence',
-      content: 'Achieved significant success in competitive programming with 400+ LeetCode problems solved and Top 13% global ranking, developing strong analytical and problem-solving skills.',
+      content: 'Achieved significant success in competitive programming with 600+ LeetCode problems solved and Top 13% global ranking, developing strong analytical and problem-solving skills.',
       skills: ['Problem Solving', 'Algorithm Design', 'Time Complexity', 'Mathematical Thinking']
     },
     {
@@ -162,7 +162,7 @@ const About = () => {
                 <p>
                   My journey in tech began with competitive programming, where I honed my
                   problem-solving skills by tackling over{' '}
-                  <span className="text-accent-400 font-medium">400 LeetCode problems</span> and
+                  <span className="text-accent-400 font-medium">600 LeetCode problems</span> and
                   achieving a{' '}
                   <span className="text-primary-400 font-medium">Top 13% global ranking</span>.
                 </p>

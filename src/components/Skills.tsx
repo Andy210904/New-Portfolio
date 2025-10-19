@@ -221,51 +221,7 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Performance Metrics */}
-        <motion.div
-          className="text-center"
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className="glass-card p-8 max-w-4xl mx-auto">
-            <div className="mb-8">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Skills in <span className="gradient-text">Numbers</span>
-              </h3>
-              <p className="text-gray-400">Quantified achievements and experience</p>
-            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { label: 'Problems Solved', value: '400+', description: 'LeetCode & Contests' },
-                { label: 'Global Ranking', value: 'Top 13%', description: 'Competitive Programming' },
-                { label: 'Projects Built', value: '10+', description: 'Full-Stack Applications' },
-                { label: 'Technologies', value: '15+', description: 'Languages & Frameworks' }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-3xl font-bold text-primary-400 mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-white font-medium mb-1">
-                    {stat.label}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    {stat.description}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
