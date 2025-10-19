@@ -121,14 +121,16 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           variants={itemVariants}
         >
-          <motion.button
+          <motion.a
+            href="/Resume.pdf"
+            download="Aditya_Dhane_Resume.pdf"
             className="btn-primary flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Download size={18} />
             Download Resume
-          </motion.button>
+          </motion.a>
 
           <motion.button
             className="btn-secondary"
