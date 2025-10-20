@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Trophy, Star, Medal, Target, BookOpen, Users } from 'lucide-react';
+import { Award, Trophy, Star, Medal, Target, Users } from 'lucide-react';
 
 const Achievements = () => {
   const containerVariants = {
@@ -28,51 +28,51 @@ const Achievements = () => {
 
   const achievements = [
     {
-      icon: Trophy,
+      icon: "/leetcode.png",
       title: "Top 13% LeetCode Contest Rating",
       description: "Ranked in the Top 13% of LeetCode Contest Ratings and earned the 200 Days Coding badge in 2024",
       date: "2024",
-      color: "from-yellow-400 to-orange-500",
+      // color: "from-yellow-400 to-orange-500",
       category: "Competitive Programming"
     },
     {
-      icon: Award,
+      icon: "/mozilla.png",
       title: "3rd Place in Team Coding Competition",
       description: "Achieved 3rd place in a team coding competition organized by Mozilla Firefox Club at VIT during Gravitas Tech Fest 2023",
       date: "2023",
-      color: "from-neon-blue to-neon-purple",
+      // color: "from-neon-blue to-neon-purple",
       category: "Competition"
     },
     {
-      icon: Star,
+      icon: "/leetcode.png",
       title: "600+ LeetCode Problems Solved",
       description: "Solved 600+ questions on LeetCode, enhancing problem-solving and algorithmic skills with consistent practice",
-      date: "2023-2024",
+      date: "2023-Present",
       color: "from-neon-purple to-neon-pink",
       category: "Achievement"
     },
     {
-      icon: Medal,
+      icon: "/vit.png",
       title: "CGPA Excellence",
       description: "Maintaining an outstanding CGPA of 9.21 throughout the B.Tech Computer Science program at VIT Vellore",
       date: "2022-Present",
-      color: "from-green-400 to-blue-500",
+      // color: "from-green-400 to-blue-500",
       category: "Academic"
     },
     {
-      icon: Target,
+      icon: "/tag.png",
       title: "Core Member - TAG Club",
       description: "Served as Core Member at Technology and Gaming Club (TAG), designing UI/UX for events and improving engagement by 25%",
       date: "Apr 2024 - Jan 2025",
-      color: "from-red-400 to-pink-500",
+      // color: "from-red-400 to-pink-500",
       category: "Leadership"
     },
     {
-      icon: BookOpen,
+      icon: "/microsoft-logo.png",
       title: "Microsoft Azure AI Certified",
       description: "Microsoft Certified: Azure AI Fundamentals, demonstrating expertise in AI and cloud technologies",
       date: "2024",
-      color: "from-indigo-400 to-purple-500",
+      // color: "from-indigo-400 to-purple-500",
       category: "Certification"
     }
   ];
@@ -140,11 +140,23 @@ const Achievements = () => {
               >
                 <div className="flex items-start mb-4">
                   <motion.div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${achievement.color} flex items-center justify-center mr-4 group-hover:shadow-lg transition-all duration-300`}
+                    className={`${achievement.icon === "/tag.png"
+                      ? "w-16 h-16"
+                      : "w-12 h-12"
+                      } rounded-lg bg-gradient-to-r ${achievement.color} flex items-center justify-center mr-4 group-hover:shadow-lg transition-all duration-300`}
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <achievement.icon size={20} className="text-white" />
+                    <img
+                      src={achievement.icon}
+                      alt={`${achievement.title} icon`}
+                      className={`${achievement.icon === "/tag.png"
+                        ? "w-14 h-14"
+                        : achievement.icon === "/vit.png"
+                          ? "w-12 h-12"
+                          : "w-9 h-9"
+                        } object-contain`}
+                    />
                   </motion.div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">

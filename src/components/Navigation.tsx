@@ -11,22 +11,22 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
+
       // Calculate scroll progress
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (window.scrollY / scrollHeight) * 100;
       setScrollProgress(Math.min(progress, 100));
-      
+
       // Update active section based on scroll position
       const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'contact'];
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
             setActiveSection(section);
             break;
@@ -34,7 +34,7 @@ const Navigation = () => {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -56,11 +56,10 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50 shadow-xl shadow-gray-900/20' 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+          ? 'bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50 shadow-xl shadow-gray-900/20'
           : 'bg-transparent'
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -97,11 +96,10 @@ const Navigation = () => {
               return (
                 <motion.button
                   key={item.name}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative group ${
-                    isActive 
-                      ? 'text-primary-400 bg-primary-500/10' 
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 relative group ${isActive
+                      ? 'text-primary-400 bg-primary-500/10'
                       : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleNavClick(item.href)}
@@ -168,11 +166,10 @@ const Navigation = () => {
                   return (
                     <motion.button
                       key={item.name}
-                      className={`block w-full text-left px-4 py-3 mx-2 rounded-lg font-medium transition-all duration-300 relative ${
-                        isActive 
-                          ? 'text-primary-400 bg-primary-500/10 border border-primary-500/20' 
+                      className={`block w-full text-left px-4 py-3 mx-2 rounded-lg font-medium transition-all duration-300 relative ${isActive
+                          ? 'text-primary-400 bg-primary-500/10 border border-primary-500/20'
                           : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                      }`}
+                        }`}
                       onClick={() => handleNavClick(item.href)}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -197,7 +194,7 @@ const Navigation = () => {
           )}
         </AnimatePresence>
       </div>
-      
+
       {/* Scroll Progress Indicator */}
       <motion.div
         className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-800"
